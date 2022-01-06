@@ -10,28 +10,27 @@ public class LinkedList<T> implements List<T> {
     private Node tail;
 //    private int data;
 
-    // כשיש לי איבר אחד ברשימה , הוא גם האחרון וגם הראשון זתאמרת שהם שווים
+    // When there is one value, it will be the first and last
 
     public LinkedList() {
-        this.head = null; // אין מישהו ברשימה,היא ריקה
+        this.head = null; 
         this.size = 0;
 
     }
 
 
     @Override
-    public void add(T data) { // פונקצייה שמורה כשיוצרים רשימה מקושרת
-        if (this.head == null) // אם הרשימה ריקה
+    public void add(T data) {      
+        if (this.head == null)   
             this.head = new Node(data);
-        else { // מה קורה אם יש כבר איבר , אני עדיין רוצה להכניס איבר
-            Node new_Node = new Node(data); // רוצים לבנות את הצומת // עשינו איבר חדש
-            Node temp_head = this.head; // הכנסתי את הכתובת כי אני לא רוצה לשנות את האוביקט הראשון
-            while (temp_head.next != null) // רוצים לצאת מהלולאה שהנקסט שלה יהיה שווה ל NULL
-                temp_head = temp_head.next;  // שמים את הטמפ הישן בנקסט חדש
-            temp_head.next = new_Node; // יצאנו מהלולאה ושמנו בנוד חדש
+        else { 
+            Node new_Node = new Node(data); 
+            Node temp_head = this.head; 
+            while (temp_head.next != null) 
+                temp_head = temp_head.next;  
+            temp_head.next = new_Node; // 
         }
         size++; //
-        // האורך של הרשימה
     }
 
     // o(n)
@@ -42,8 +41,8 @@ public class LinkedList<T> implements List<T> {
             this.head = temp;
         else {
             temp.next = this.head; //
-            this.head = temp; // הטמפ הוא ראשון
-            while (temp.next != null) { // לעבור על כל הערכים , אם הוא שונה מנאל אז קיים מישהו מאחורי
+            this.head = temp;   
+            while (temp.next != null) { 
                 temp = temp.next;
             }
         }
@@ -121,7 +120,7 @@ public class LinkedList<T> implements List<T> {
             Node new_Node = new Node(data);
             Node temp_head = this.head;
         }
-        add(this.head, data); // במקום הלולאה
+        add(this.head, data);   
         size++;
     }
     // o(1)
@@ -142,8 +141,8 @@ public class LinkedList<T> implements List<T> {
     public T remove(Node node, int index, int current) {
         if (node == null) return null;
         if (current == index) {
-            Node temp_node = node.prev; // יצרנו משתנה זמני והכנסנו לו הקודם
-            temp_node.next = head.next; // הבא של ההד אני שם אותו בתוך הנקסט של המשתנה הזמני
+            Node temp_node = node.prev;       
+            temp_node.next = head.next; 
             Node temp_node2 = node.next;
             temp_node2.prev = temp_node;
             size--;
