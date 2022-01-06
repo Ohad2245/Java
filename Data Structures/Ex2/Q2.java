@@ -10,10 +10,9 @@ public class Q2<T> extends LinkedList<T> {
     private Node tail;
 //    private int data;
 
-    // כשיש לי איבר אחד ברשימה , הוא גם האחרון וגם הראשון זתאמרת שהם שווים
 
     public Q2() {
-        this.head = null; // אין מישהו ברשימה,היא ריקה
+        this.head = null; 
         this.size = 0;
     }
     // o(n)
@@ -57,8 +56,8 @@ public class Q2<T> extends LinkedList<T> {
     public T remove(Node node, int index, int current) {
         if (node == null) return null;
         if (current == index) {
-            Node temp_node = node.prev; // יצרנו משתנה זמני והכנסנו לו הקודם
-            temp_node.next = head.next; // הבא של ההד אני שם אותו בתוך הנקסט של המשתנה הזמני
+            Node temp_node = node.prev; 
+            temp_node.next = head.next; 
             Node temp_node2 = node.next;
             temp_node2.prev = temp_node;
             size--;
