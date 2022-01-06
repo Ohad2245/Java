@@ -7,10 +7,9 @@ public class Q3<T> {
     private Node tail;
 //    private int data;
 
-    // כשיש לי איבר אחד ברשימה , הוא גם האחרון וגם הראשון זתאמרת שהם שווים
 
     public Q3() {
-        this.head = null; // אין מישהו ברשימה,היא ריקה
+        this.head = null;    
         this.size = 0;
     }
     // סיבוכיות של o(n)
