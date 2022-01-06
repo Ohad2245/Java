@@ -153,7 +153,7 @@ public class LinkedList<T> implements List<T> {
     }
 
     // Q3
-    // סיבוכיות של o(n)
+    // o(n)
     public static void delete(Node head, int x){
         if(head.next == null) {
             return;
