@@ -35,7 +35,7 @@ public class Q2<T> extends LinkedList<T> {
             Node new_Node = new Node(data);
             Node temp_head = this.head;
         }
-        add(this.head, data); // במקום הלולאה
+        add(this.head, data);  
         size++;
     }
     // o(1)
