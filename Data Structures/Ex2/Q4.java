@@ -8,10 +8,9 @@ public class Q4 {
     private Node tail;
 //    private int data;
 
-    // כשיש לי איבר אחד ברשימה , הוא גם האחרון וגם הראשון זתאמרת שהם שווים
 
     public Q4() {
-        this.head = null; // אין מישהו ברשימה,היא ריקה
+        this.head = null; 
         this.size = 0;
 
     }
